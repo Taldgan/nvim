@@ -2,7 +2,6 @@ require("options")
 require("keybinds")
 require("plugkeybinds")
 
-
 -- Lazy Bootstrapper
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
