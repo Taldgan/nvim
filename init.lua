@@ -1,5 +1,6 @@
 require("options")
 require("keybinds")
+require("plugkeybinds")
 
 
 -- Lazy Bootstrapper
@@ -18,12 +19,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 opts = {
-  install = { colorscheme = { require("user.colorscheme").name } },
-  defaults = { lazy = true },
+  install = { colorscheme = {require("plugins.colorscheme").name } },
+  defaults = { lazy = false },
   ui = { wrap = "true" },
   checker = { enabled = true },
   change_detection = { enabled = true },
   debug = false,
 }
 
-require("lazy").setup(plugins, opts)
+require("lazy").setup("plugins", opts)
