@@ -14,6 +14,8 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>")
 keymap("n", "<leader>fF", ":Telescope live_grep<CR>")
+keymap("n", "<leader>fr", ":Telescope oldfiles<CR>")
+keymap("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>")
 
 -- DAP
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
