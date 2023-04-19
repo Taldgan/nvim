@@ -1,12 +1,15 @@
 local M = {
   "folke/which-key.nvim",
-  event = "VeryLazy",
 }
 
 -- TODO - create proper prefix labels & configuration for which-key
 
 function M.config()
-  require("which-key").setup {}
+  local whichkey = require("which-key")
+
+  whichkey.setup({})
+  whichkey.register(mappings, opts)
+  whichkey.register(vmappings, vopts)
 end
 
 return M
