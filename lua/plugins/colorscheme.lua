@@ -1,7 +1,7 @@
 local M = {
 -- "folke/tokyonight.nvim",
   "nordtheme/vim",
-  lazy = false,         
+  lazy = false,
   priority = 1000,         -- folke mentions this is necessary to ensure its loaded first
 }
 
