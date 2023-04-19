@@ -35,8 +35,8 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers (t because b is a weird key)
-keymap("n", "<leader>tn", ":bnext<CR>", opts)
-keymap("n", "<leader>tp", ":bprevious<CR>", opts)
+keymap("n", "<leader>bn", ":bnext<CR>", opts)
+keymap("n", "<leader>bp", ":bprevious<CR>", opts)
 
 -- Insert --
 -- Press jk fast to exit insert mode
@@ -50,10 +50,12 @@ keymap("v", "p", '"_dP', opts)
 
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "<A-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<A-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<A-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<A-l>", "<C-\\><C-N><C-w>l", term_opts)
+keymap("t", "<A-h>", "<C-\\><C-n><C-w>h", term_opts)
+keymap("t", "<A-j>", "<C-\\><C-n><C-w>j", term_opts)
+keymap("t", "<A-k>", "<C-\\><C-n><C-w>k", term_opts)
+keymap("t", "<A-l>", "<C-\\><C-n><C-w>l", term_opts)
+
+keymap("t", "<A-n>", "<C-\\><C-n>", term_opts)
 
 -- Remove highlight mapping
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)

@@ -34,7 +34,7 @@ keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dT", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 --BufferLine
-keymap("n", "<leader>tt", "<cmd>BufferLinePick<CR>", opts)
+keymap("n", "<leader>bt", "<cmd>BufferLinePick<CR>", opts)
 
 -- LSP Keybinds
 -- Using Leader (For Telescope)
@@ -58,3 +58,8 @@ keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap("n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+
+-- ToggleTerm (default term keybinding in toggleterm.lua)
+keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<leader>tg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<CR>", opts)

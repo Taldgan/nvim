@@ -119,6 +119,7 @@ function M.config()
     ["e"] =  "Explorer",
     ["g"] = {
       name = "git",
+      g = "lazygit",
     },
     ["l"] = {
       name = "lsp",
@@ -136,8 +137,14 @@ function M.config()
       u = "Toggle Debug UI",
       T = "Terminate",
     },
-    ["t"] = {
+    ["b"] = {
       name = "buffer",
+    },
+    ["t"] = {
+      name = "terminal",
+      t = "Terminal",
+      p = "ptipython",
+      g = "lazygit",
     },
     ["f"] = {
       name = "file",

@@ -31,13 +31,30 @@ function M.config()
     -- errors if not here, but keybindings in keybinds.lua
   end
 
-  vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
+  -- vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
 
   local Terminal = require("toggleterm.terminal").Terminal
-  local lazygit = Terminal:new { cmd = "lazygit", hidden = true }
+  local lazygit = Terminal:new {
+    cmd = "lazygit",
+    hidden = true,
+    on_open = function (term)
+        vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<C-\\>", "<cmd>close<CR>", {noremap = true, silent = true})
+    end
+  }
 
+  local ptpython = Terminal:new {
+    cmd = "ptipython",
+    hidden = true,
+    on_open = function (term)
+        vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<C-\\>", "<cmd>close<CR>", {noremap = true, silent = true})
+    end
+  }
   function _LAZYGIT_TOGGLE()
     lazygit:toggle()
+  end
+
+  function _PYTHON_TOGGLE()
+    ptpython:toggle()
   end
 end
 
