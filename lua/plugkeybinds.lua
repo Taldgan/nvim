@@ -34,7 +34,7 @@ keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dT", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 --BufferLine
-keymap("n", "<leader>bt", "<cmd>BufferLinePick<CR>", opts)
+keymap("n", "<leader>bb", "<cmd>BufferLinePick<CR>", opts)
 
 -- LSP Keybinds
 -- Using Leader (For Telescope)

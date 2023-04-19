@@ -139,6 +139,9 @@ function M.config()
     },
     ["b"] = {
       name = "buffer",
+      n = "Next Buffer",
+      p = "Previous Buffer",
+      b = "Pick Buffer",
     },
     ["t"] = {
       name = "terminal",
@@ -147,7 +150,7 @@ function M.config()
       g = "lazygit",
     },
     ["f"] = {
-      name = "file",
+      name = "find",
       f = "Find Files",
       t = "Find Text",
       r = "Recent Files",
