@@ -11,7 +11,13 @@ function M.config()
 
  -- TODO - Add alt 1/2/3 bindings 
   toggleterm.setup {
-    size = 20,
+    size = function(term)
+      if term.direction == "horizontal" then
+        return 12
+      elseif term.direction == "vertical" then
+        return vim.o.columns * 0.4
+      end
+    end,
     open_mapping = [[<c-\>]],
     hide_numbers = true,
     shade_terminals = true,
@@ -42,6 +48,22 @@ function M.config()
     end
   }
 
+  local horiz = Terminal:new {
+    hidden = true,
+    direction = "horizontal",
+    on_open = function (term)
+        vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<M-1>", "<cmd>close<CR>", {noremap = true, silent = true})
+    end
+  }
+
+  local vert = Terminal:new {
+    hidden = true,
+    direction = "vertical",
+    on_open = function (term)
+        vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<M-2>", "<cmd>close<CR>", {noremap = true, silent = true})
+    end
+  }
+
   local ptpython = Terminal:new {
     cmd = "ptipython",
     hidden = true,
@@ -49,6 +71,15 @@ function M.config()
         vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<C-\\>", "<cmd>close<CR>", {noremap = true, silent = true})
     end
   }
+  
+  function _HORIZ_TOGGLE()
+    horiz:toggle()
+  end
+
+  function _VERT_TOGGLE()
+    vert:toggle()
+  end
+
   function _LAZYGIT_TOGGLE()
     lazygit:toggle()
   end
