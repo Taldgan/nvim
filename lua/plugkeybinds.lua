@@ -22,6 +22,9 @@ keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 -- Telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>ft", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
+-- double mapping bc I'm braindead
+keymap("n", "<leader>bf", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<CR>", opts)
 keymap("n", "<leader>fk", "<cmd>lua require'telescope.builtin'.keymaps{}<CR>", opts)

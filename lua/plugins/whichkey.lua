@@ -143,6 +143,7 @@ function M.config()
       n = "Next Buffer",
       p = "Previous Buffer",
       b = "Pick Buffer",
+      f = "Find Buffer",
     },
     ["t"] = {
       name = "terminal",
@@ -154,6 +155,7 @@ function M.config()
       name = "find",
       f = "Find Files",
       t = "Find Text",
+      b = "Find Buffer",
       r = "Recent Files",
       s = "Find Symbols",
       k = "Find Keymaps",
