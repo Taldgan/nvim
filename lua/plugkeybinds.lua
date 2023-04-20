@@ -21,6 +21,7 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
 keymap("n", "<leader>ft", "<cmd>Telescope live_grep<CR>")
 keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>")
 keymap("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<CR>")
+keymap("n", "<leader>fk", "<cmd>lua require'telescope.builtin'.keymaps{}<CR>")
 
 -- DAP
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)

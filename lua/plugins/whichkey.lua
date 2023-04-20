@@ -155,6 +155,7 @@ function M.config()
       t = "Find Text",
       r = "Recent Files",
       s = "Find Symbols",
+      k = "Find Keymaps",
     },
   }
 
