@@ -117,6 +117,7 @@ function M.config()
     ["h"] =  "Remove Active Highlight",
     [";"] =  "Dashboard",
     ["e"] =  "Explorer",
+    ["c"] =  "Clear Notifications",
     ["g"] = {
       name = "git",
       g = "lazygit",

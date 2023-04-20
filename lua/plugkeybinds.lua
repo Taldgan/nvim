@@ -1,5 +1,5 @@
 -- Plugin Keybinds
---
+
 -- Shorten function name
 local keymap = vim.keymap.set
 -- Silent keymap option
@@ -8,20 +8,23 @@ local opts = { noremap = true, silent = true }
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 
+-- Vim-Notify
+keymap("n", "<leader>c", [[<cmd>lua require("notify").dismiss({silent = true, pending = true})<CR>]], opts)
+
 -- Alpha
-keymap("n", "<leader>;", "<cmd>Alpha<CR>")
+keymap("n", "<leader>;", "<cmd>Alpha<CR>", opts)
 -- Automatically open alpha when the last buffer is deleted and only one window left
 vim.cmd [[ au BufDelete * if empty(filter(tabpagebuflist(), '!buflisted(v:val)')) && winnr('$') == 1 | exec 'Alpha' | endif ]]
 
 -- Nvim-Tree
-keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
-keymap("n", "<leader>ft", "<cmd>Telescope live_grep<CR>")
-keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>")
-keymap("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<CR>")
-keymap("n", "<leader>fk", "<cmd>lua require'telescope.builtin'.keymaps{}<CR>")
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>ft", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", opts)
+keymap("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<CR>", opts)
+keymap("n", "<leader>fk", "<cmd>lua require'telescope.builtin'.keymaps{}<CR>", opts)
 
 -- DAP
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
