@@ -127,9 +127,12 @@ function M.config()
       r = "Find References",
     },
     ["d"] = {
-      name = "dap",
+      name = "debug",
       t = "Toggle Breakpoint",
       c = "Continue",
+      C = "Continue Until Cursor",
+      e = "Eval At Cursor",
+      p = "Pause",
       i = "Step Into",
       o = "Step Over",
       O = "Step Out",
