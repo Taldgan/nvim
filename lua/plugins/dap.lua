@@ -33,6 +33,28 @@ function M.config()
       -- detached = false,
     },
   }
+
+  dap.adapters.debugpy = {
+    type = "executable",
+    command = "/usr/bin/python",
+    args = { "-m", "debugpy.adapter", },
+    config = { pythonPath = '/usr/bin/python' },
+    options = {
+      source_filetype = 'python',
+    }
+  }
+
+  dap.configurations.python = {
+    {
+      name = 'Launch file',
+      type = 'debugpy',
+      request = 'launch',
+      program = '${file}',
+      console = 'integratedTerminal',
+      pythonPath = "/usr/bin/python",
+    },
+  }
+
   dap.configurations.c = {
     {
       name = "Launch file",
