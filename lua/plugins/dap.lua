@@ -40,7 +40,7 @@ function M.config()
       request = "launch",
       program = function()
         local path
-        vim.ui.input({ prompt = "Path to executable: ", default = vim.loop.cwd() .. "/build/" }, function(input)
+        vim.ui.input({ prompt = "Path to executable: ", default = vim.loop.cwd() .. "/" }, function(input)
           path = input
         end)
         vim.cmd [[redraw]]
@@ -49,6 +49,25 @@ function M.config()
       cwd = "${workspaceFolder}",
       stopOnEntry = false,
     },
+  }
+
+  dap.configurations.cpp = dap.configurations.c
+  dap.configurations.zig = {
+    {
+      name = "Launch file",
+      type = "codelldb",
+      request = "launch",
+      program = function()
+        local path
+        vim.ui.input({ prompt = "Path to executable: ", default = vim.loop.cwd() .. "/zig-out/bin/" }, function(input)
+          path = input
+        end)
+        vim.cmd [[redraw]]
+        return path
+      end,
+      cwd = "${workspaceFolder}",
+      stopOnEntry = true,
+    }
   }
 end
 

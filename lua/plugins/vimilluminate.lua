@@ -1,5 +1,7 @@
 local M = {
   "RRethy/vim-illuminate",
+  lazy = true,
+  event = "BufReadPre",
 }
 
 function M.config()
