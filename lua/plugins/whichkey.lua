@@ -147,6 +147,7 @@ function M.config()
       p = "Previous Buffer",
       b = "Pick Buffer",
       f = "Find Buffer",
+      c = "Close Buffer",
     },
     ["t"] = {
       name = "terminal",

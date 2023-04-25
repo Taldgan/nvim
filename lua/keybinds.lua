@@ -37,6 +37,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers (t because b is a weird key)
 keymap("n", "<leader>bn", ":bnext<CR>", opts)
 keymap("n", "<leader>bp", ":bprevious<CR>", opts)
+keymap("n", "<leader>bc", ":bd<CR>", opts)
 
 -- Insert --
 -- Press jk fast to exit insert mode

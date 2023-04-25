@@ -45,6 +45,7 @@ function M.config()
     hidden = true,
     on_open = function (term)
         vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<C-\\>", "<cmd>close<CR>", {noremap = true, silent = true})
+        vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-n>", "<C-\\><C-n>", {noremap = true, silent = true})
     end
   }
 
@@ -57,6 +58,7 @@ function M.config()
         vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-j>", "<C-\\><C-n><C-w>j", {noremap = true, silent = true})
         vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-k>", "<C-\\><C-n><C-w>k", {noremap = true, silent = true})
         vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-l>", "<C-\\><C-n><C-w>l", {noremap = true, silent = true})
+        vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-n>", "<C-\\><C-n>", {noremap = true, silent = true})
     end
   }
 
@@ -69,6 +71,7 @@ function M.config()
         vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-j>", "<C-\\><C-n><C-w>j", {noremap = true, silent = true})
         vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-k>", "<C-\\><C-n><C-w>k", {noremap = true, silent = true})
         vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-l>", "<C-\\><C-n><C-w>l", {noremap = true, silent = true})
+        vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-n>", "<C-\\><C-n>", {noremap = true, silent = true})
     end
   }
 
@@ -77,6 +80,7 @@ function M.config()
     hidden = true,
     on_open = function (term)
         vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<C-\\>", "<cmd>close<CR>", {noremap = true, silent = true})
+        vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-n>", "<C-\\><C-n>", {noremap = true, silent = true})
     end
   }
   

@@ -9,6 +9,10 @@ function M.config()
       enable = true,
       update_cwd = true,
     },
+    git = {
+      enable = true,
+      timeout = 400,  -- timeout because complicated projects cause nvim-tree to chug HARD
+    },
     renderer = {
       icons = {
         glyphs = {

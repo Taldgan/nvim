@@ -27,6 +27,7 @@ function M.config()
     port = "${port}",
     executable = {
       -- provide the absolute path for `codelldb` command if not using the one installed using `mason.nvim`
+      -- should be /home/YOURUSER/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb
       command = "codelldb",
       args = { "--port", "${port}" },
       -- On windows you may have to uncomment this:
