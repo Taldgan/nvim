@@ -125,6 +125,8 @@ function M.config()
     ["l"] = {
       name = "lsp",
       r = "Find References",
+      R = "LSP Rename",
+      s = "Find Symbols",
     },
     ["d"] = {
       name = "debug",
