@@ -83,7 +83,6 @@ function M.config()
         vim.api.nvim_buf_set_keymap(term.bufnr, "t", "<A-n>", "<C-\\><C-n>", {noremap = true, silent = true})
     end
   }
-  
   function _HORIZ_TOGGLE()
     horiz:toggle()
   end

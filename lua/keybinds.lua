@@ -57,6 +57,9 @@ keymap("t", "<A-k>", "<C-\\><C-n><C-w>k", term_opts)
 keymap("t", "<A-l>", "<C-\\><C-n><C-w>l", term_opts)
 
 keymap("t", "<A-n>", "<C-\\><C-n>", term_opts)
+-- Terminal No Number autocmd
+keymap("n", "<A-t>", "<cmd>terminal<CR>", term_opts)
+vim.cmd [[autocmd TermOpen * setlocal nonumber norelativenumber]]
 
 -- Remove highlight mapping
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
