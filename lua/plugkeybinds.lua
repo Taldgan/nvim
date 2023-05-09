@@ -69,8 +69,12 @@ keymap("n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 
--- ToggleTerm (default term keybinding in toggleterm.lua)
+-- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<leader>gj", "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>")
+keymap("n", "<leader>gk", "cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>")
+
+-- ToggleTerm (default term keybinding in toggleterm.lua)
 keymap("n", "<leader>tg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 keymap("n", "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<CR>", opts)
 keymap("n", "<M-1>", "<cmd>lua _HORIZ_TOGGLE()<CR>", opts)
